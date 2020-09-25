@@ -13,7 +13,7 @@ import Combine
 
 struct ImagePicker: UIViewControllerRepresentable {
     var sourceType: UIImagePickerController.SourceType = .photoLibrary
-    @Binding var filterConfig: FilterConfig
+    @Binding var selectedImage: UIImage
     @Environment(\.presentationMode) var presentationMode
 
     func makeUIViewController(context: UIViewControllerRepresentableContext<ImagePicker>) -> UIImagePickerController {
@@ -42,7 +42,7 @@ struct ImagePicker: UIViewControllerRepresentable {
         
         func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
             if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
-                parent.filterConfig.userSelectedImage(image: image)
+                parent.selectedImage = image
             }
             
             parent.presentationMode.wrappedValue.dismiss()

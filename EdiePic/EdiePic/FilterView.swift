@@ -8,117 +8,30 @@
 
 import SwiftUI
 import Combine
-import CoreImage
-import CoreImage.CIFilterBuiltins
-
-struct FilterConfig {
-    var selectedImage: Image
-    var filteredImages: [Image]
-    
-    init(defaultImageName: String) {
-        self.selectedImage = Image(defaultImageName)
-        filteredImages = [Image(defaultImageName)]
-        prepareFilters(image: UIImage(named: defaultImageName)!)
-    }
-    
-    mutating func userSelectedImage(image: UIImage) {
-        filteredImages = [Image(uiImage: image)]
-        prepareFilters(image: image)
-        selectedImage = Image(uiImage: image)
-    }
-}
-
-// MARK: PRepare filters
-extension FilterConfig {
-    private mutating func prepareFilters(image: UIImage) {
-        if let image = getSepiaImageForSelectedImage(inputImage: image) {
-            store(filteredImage: image)
-        }
-        
-        if let image = getVignetteImageForSelectedImage(inputImage: image) {
-            store(filteredImage: image)
-        }
-        
-        if let image = getDitherImageForSelectedImage(inputImage: image) {
-            store(filteredImage: image)
-        }
-    }
-    
-    private mutating func store(filteredImage: Image) {
-        self.filteredImages = self.filteredImages + [filteredImage]
-    }
-    
-    private func getSepiaImageForSelectedImage(inputImage: UIImage) -> Image? {
-        let beginImage = CIImage(image: inputImage)
-        
-        let context = CIContext()
-        let currentFilter = CIFilter.sepiaTone()
-        currentFilter.inputImage = beginImage
-        currentFilter.intensity = 1
-        
-        guard let outputImage = currentFilter.outputImage,
-        let cgimg = context.createCGImage(outputImage, from: outputImage.extent) else {
-            return nil
-        }
-        
-        return Image(uiImage: UIImage(cgImage: cgimg))
-    }
-    
-    private func getVignetteImageForSelectedImage(inputImage: UIImage) -> Image? {
-        let beginImage = CIImage(image: inputImage)
-        
-        let context = CIContext()
-        let currentFilter = CIFilter.vignette()
-        currentFilter.inputImage = beginImage
-        currentFilter.intensity = 4
-        
-        guard let outputImage = currentFilter.outputImage,
-        let cgimg = context.createCGImage(outputImage, from: outputImage.extent) else {
-            return nil
-        }
-        
-        return Image(uiImage: UIImage(cgImage: cgimg))
-    }
-    
-    private func getDitherImageForSelectedImage(inputImage: UIImage) -> Image? {
-        let beginImage = CIImage(image: inputImage)
-        
-        let context = CIContext()
-        let currentFilter = CIFilter.dither()
-        currentFilter.inputImage = beginImage
-        currentFilter.intensity = 1
-        
-        guard let outputImage = currentFilter.outputImage,
-        let cgimg = context.createCGImage(outputImage, from: outputImage.extent) else {
-            return nil
-        }
-        
-        return Image(uiImage: UIImage(cgImage: cgimg))
-    }
-}
-
 
 struct FilterView: View {
     @State private var isShowPhotoLibrary = false
-    @State private var imageFilterConfig: FilterConfig = FilterConfig(defaultImageName: "bike")
+    @ObservedObject var imageFilterViewModel: FilterViewModel
     
     var body: some View {
         ZStack {
             VStack {
                 Spacer()
                 
-                imageFilterConfig.selectedImage
+                imageFilterViewModel.displayedImage
+                    .swiftUIImage
                     .resizable()
                     .scaledToFit()
                 
                 Spacer(minLength: 40)
                 ScrollView([.horizontal]) {
                     HStack {
-                        ForEach(0..<(imageFilterConfig.filteredImages.count), id: \.self) { index in
+                        ForEach(0..<(imageFilterViewModel.filteredImages.count), id: \.self) { index in
                             Button(action: {
-                                self.imageFilterConfig.selectedImage = self.imageFilterConfig.filteredImages[index]
+                                self.imageFilterViewModel.displayedImage = self.imageFilterViewModel.filteredImages[index]
                             }) {
-                                self.imageFilterConfig.filteredImages[index]
+                                self.imageFilterViewModel.filteredImages[index]
+                                    .swiftUIImage
                                     .resizable()
                                     .renderingMode(.original)
                                     .frame(width: 100, height: 70)
@@ -147,7 +60,7 @@ struct FilterView: View {
             .padding()
             .sheet(isPresented: $isShowPhotoLibrary) {
                 ImagePicker(sourceType: .photoLibrary,
-                            filterConfig: self.$imageFilterConfig)
+                            selectedImage: self.$imageFilterViewModel.selectedImage)
             }
         }
     }
@@ -156,6 +69,12 @@ struct FilterView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        FilterView()
+        FilterView(imageFilterViewModel: FilterViewModel(defaultImageName: "bike"))
+    }
+}
+
+extension UIImage {
+    var swiftUIImage: Image {
+        Image(uiImage: self)
     }
 }

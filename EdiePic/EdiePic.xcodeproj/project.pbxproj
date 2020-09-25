@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		9323413924FBD0EC0017AD9F /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9323413824FBD0EC0017AD9F /* ImagePicker.swift */; };
+		9375DC0C251D8FC70098F171 /* FilterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9375DC0B251D8FC70098F171 /* FilterViewModel.swift */; };
 		93A69FC524F4BAE700596707 /* ExperimentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93A69FC424F4BAE700596707 /* ExperimentView.swift */; };
 		93F05AD824F38541003C8119 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F05AD724F38541003C8119 /* AppDelegate.swift */; };
 		93F05ADA24F38541003C8119 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F05AD924F38541003C8119 /* SceneDelegate.swift */; };
@@ -19,6 +20,7 @@
 
 /* Begin PBXFileReference section */
 		9323413824FBD0EC0017AD9F /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		9375DC0B251D8FC70098F171 /* FilterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewModel.swift; sourceTree = "<group>"; };
 		93A69FC424F4BAE700596707 /* ExperimentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExperimentView.swift; sourceTree = "<group>"; };
 		93F05AD424F38541003C8119 /* EdiePic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EdiePic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93F05AD724F38541003C8119 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 				93F05AD724F38541003C8119 /* AppDelegate.swift */,
 				93F05AD924F38541003C8119 /* SceneDelegate.swift */,
 				93F05ADB24F38541003C8119 /* FilterView.swift */,
+				9375DC0B251D8FC70098F171 /* FilterViewModel.swift */,
 				93A69FC424F4BAE700596707 /* ExperimentView.swift */,
 				9323413824FBD0EC0017AD9F /* ImagePicker.swift */,
 				93F05ADD24F38542003C8119 /* Assets.xcassets */,
@@ -156,6 +159,7 @@
 				93F05ADA24F38541003C8119 /* SceneDelegate.swift in Sources */,
 				9323413924FBD0EC0017AD9F /* ImagePicker.swift in Sources */,
 				93F05ADC24F38541003C8119 /* FilterView.swift in Sources */,
+				9375DC0C251D8FC70098F171 /* FilterViewModel.swift in Sources */,
 				93A69FC524F4BAE700596707 /* ExperimentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
