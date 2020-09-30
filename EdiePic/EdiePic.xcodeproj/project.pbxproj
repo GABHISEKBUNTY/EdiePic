@@ -7,33 +7,68 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9323413924FBD0EC0017AD9F /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9323413824FBD0EC0017AD9F /* ImagePicker.swift */; };
-		9375DC0C251D8FC70098F171 /* FilterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9375DC0B251D8FC70098F171 /* FilterViewModel.swift */; };
-		93A69FC524F4BAE700596707 /* ExperimentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93A69FC424F4BAE700596707 /* ExperimentView.swift */; };
-		93F05AD824F38541003C8119 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F05AD724F38541003C8119 /* AppDelegate.swift */; };
-		93F05ADA24F38541003C8119 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F05AD924F38541003C8119 /* SceneDelegate.swift */; };
-		93F05ADC24F38541003C8119 /* FilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F05ADB24F38541003C8119 /* FilterView.swift */; };
-		93F05ADE24F38542003C8119 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93F05ADD24F38542003C8119 /* Assets.xcassets */; };
-		93F05AE124F38542003C8119 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93F05AE024F38542003C8119 /* Preview Assets.xcassets */; };
-		93F05AE424F38542003C8119 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93F05AE224F38542003C8119 /* LaunchScreen.storyboard */; };
+		93BCE715252426A3009A2886 /* EdiePicApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93BCE714252426A3009A2886 /* EdiePicApp.swift */; };
+		93BCE719252426A4009A2886 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93BCE718252426A4009A2886 /* Assets.xcassets */; };
+		93BCE71C252426A4009A2886 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93BCE71B252426A4009A2886 /* Preview Assets.xcassets */; };
+		93BCE727252426A5009A2886 /* EdiePicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93BCE726252426A5009A2886 /* EdiePicTests.swift */; };
+		93BCE732252426A5009A2886 /* EdiePicUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93BCE731252426A5009A2886 /* EdiePicUITests.swift */; };
+		93BCE746252426D0009A2886 /* FilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93BCE742252426D0009A2886 /* FilterView.swift */; };
+		93BCE747252426D0009A2886 /* FilterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93BCE743252426D0009A2886 /* FilterViewModel.swift */; };
+		93BCE748252426D0009A2886 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93BCE744252426D0009A2886 /* ImagePicker.swift */; };
+		93BCE749252426D0009A2886 /* ExperimentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93BCE745252426D0009A2886 /* ExperimentView.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		93BCE723252426A5009A2886 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 93BCE709252426A3009A2886 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 93BCE710252426A3009A2886;
+			remoteInfo = EdiePic;
+		};
+		93BCE72E252426A5009A2886 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 93BCE709252426A3009A2886 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 93BCE710252426A3009A2886;
+			remoteInfo = EdiePic;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
-		9323413824FBD0EC0017AD9F /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
-		9375DC0B251D8FC70098F171 /* FilterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewModel.swift; sourceTree = "<group>"; };
-		93A69FC424F4BAE700596707 /* ExperimentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExperimentView.swift; sourceTree = "<group>"; };
-		93F05AD424F38541003C8119 /* EdiePic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EdiePic.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		93F05AD724F38541003C8119 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		93F05AD924F38541003C8119 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		93F05ADB24F38541003C8119 /* FilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterView.swift; sourceTree = "<group>"; };
-		93F05ADD24F38542003C8119 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		93F05AE024F38542003C8119 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		93F05AE324F38542003C8119 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		93F05AE524F38542003C8119 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		93BCE711252426A3009A2886 /* EdiePic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EdiePic.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		93BCE714252426A3009A2886 /* EdiePicApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EdiePicApp.swift; sourceTree = "<group>"; };
+		93BCE718252426A4009A2886 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		93BCE71B252426A4009A2886 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		93BCE71D252426A4009A2886 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		93BCE722252426A5009A2886 /* EdiePicTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EdiePicTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		93BCE726252426A5009A2886 /* EdiePicTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EdiePicTests.swift; sourceTree = "<group>"; };
+		93BCE728252426A5009A2886 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		93BCE72D252426A5009A2886 /* EdiePicUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EdiePicUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		93BCE731252426A5009A2886 /* EdiePicUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EdiePicUITests.swift; sourceTree = "<group>"; };
+		93BCE733252426A5009A2886 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		93BCE742252426D0009A2886 /* FilterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterView.swift; sourceTree = "<group>"; };
+		93BCE743252426D0009A2886 /* FilterViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterViewModel.swift; sourceTree = "<group>"; };
+		93BCE744252426D0009A2886 /* ImagePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		93BCE745252426D0009A2886 /* ExperimentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExperimentView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		93F05AD124F38541003C8119 /* Frameworks */ = {
+		93BCE70E252426A3009A2886 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		93BCE71F252426A5009A2886 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		93BCE72A252426A5009A2886 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -43,57 +78,77 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		93F05ACB24F38541003C8119 = {
+		93BCE708252426A3009A2886 = {
 			isa = PBXGroup;
 			children = (
-				93F05AD624F38541003C8119 /* EdiePic */,
-				93F05AD524F38541003C8119 /* Products */,
+				93BCE713252426A3009A2886 /* EdiePic */,
+				93BCE725252426A5009A2886 /* EdiePicTests */,
+				93BCE730252426A5009A2886 /* EdiePicUITests */,
+				93BCE712252426A3009A2886 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		93F05AD524F38541003C8119 /* Products */ = {
+		93BCE712252426A3009A2886 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				93F05AD424F38541003C8119 /* EdiePic.app */,
+				93BCE711252426A3009A2886 /* EdiePic.app */,
+				93BCE722252426A5009A2886 /* EdiePicTests.xctest */,
+				93BCE72D252426A5009A2886 /* EdiePicUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		93F05AD624F38541003C8119 /* EdiePic */ = {
+		93BCE713252426A3009A2886 /* EdiePic */ = {
 			isa = PBXGroup;
 			children = (
-				93F05AD724F38541003C8119 /* AppDelegate.swift */,
-				93F05AD924F38541003C8119 /* SceneDelegate.swift */,
-				93F05ADB24F38541003C8119 /* FilterView.swift */,
-				9375DC0B251D8FC70098F171 /* FilterViewModel.swift */,
-				93A69FC424F4BAE700596707 /* ExperimentView.swift */,
-				9323413824FBD0EC0017AD9F /* ImagePicker.swift */,
-				93F05ADD24F38542003C8119 /* Assets.xcassets */,
-				93F05AE224F38542003C8119 /* LaunchScreen.storyboard */,
-				93F05AE524F38542003C8119 /* Info.plist */,
-				93F05ADF24F38542003C8119 /* Preview Content */,
+				93BCE714252426A3009A2886 /* EdiePicApp.swift */,
+				93BCE745252426D0009A2886 /* ExperimentView.swift */,
+				93BCE742252426D0009A2886 /* FilterView.swift */,
+				93BCE743252426D0009A2886 /* FilterViewModel.swift */,
+				93BCE744252426D0009A2886 /* ImagePicker.swift */,
+				93BCE718252426A4009A2886 /* Assets.xcassets */,
+				93BCE71D252426A4009A2886 /* Info.plist */,
+				93BCE71A252426A4009A2886 /* Preview Content */,
 			);
 			path = EdiePic;
 			sourceTree = "<group>";
 		};
-		93F05ADF24F38542003C8119 /* Preview Content */ = {
+		93BCE71A252426A4009A2886 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				93F05AE024F38542003C8119 /* Preview Assets.xcassets */,
+				93BCE71B252426A4009A2886 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		93BCE725252426A5009A2886 /* EdiePicTests */ = {
+			isa = PBXGroup;
+			children = (
+				93BCE726252426A5009A2886 /* EdiePicTests.swift */,
+				93BCE728252426A5009A2886 /* Info.plist */,
+			);
+			path = EdiePicTests;
+			sourceTree = "<group>";
+		};
+		93BCE730252426A5009A2886 /* EdiePicUITests */ = {
+			isa = PBXGroup;
+			children = (
+				93BCE731252426A5009A2886 /* EdiePicUITests.swift */,
+				93BCE733252426A5009A2886 /* Info.plist */,
+			);
+			path = EdiePicUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		93F05AD324F38541003C8119 /* EdiePic */ = {
+		93BCE710252426A3009A2886 /* EdiePic */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 93F05AE824F38542003C8119 /* Build configuration list for PBXNativeTarget "EdiePic" */;
+			buildConfigurationList = 93BCE736252426A5009A2886 /* Build configuration list for PBXNativeTarget "EdiePic" */;
 			buildPhases = (
-				93F05AD024F38541003C8119 /* Sources */,
-				93F05AD124F38541003C8119 /* Frameworks */,
-				93F05AD224F38541003C8119 /* Resources */,
+				93BCE70D252426A3009A2886 /* Sources */,
+				93BCE70E252426A3009A2886 /* Frameworks */,
+				93BCE70F252426A3009A2886 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -101,25 +156,68 @@
 			);
 			name = EdiePic;
 			productName = EdiePic;
-			productReference = 93F05AD424F38541003C8119 /* EdiePic.app */;
+			productReference = 93BCE711252426A3009A2886 /* EdiePic.app */;
 			productType = "com.apple.product-type.application";
+		};
+		93BCE721252426A5009A2886 /* EdiePicTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 93BCE739252426A5009A2886 /* Build configuration list for PBXNativeTarget "EdiePicTests" */;
+			buildPhases = (
+				93BCE71E252426A5009A2886 /* Sources */,
+				93BCE71F252426A5009A2886 /* Frameworks */,
+				93BCE720252426A5009A2886 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				93BCE724252426A5009A2886 /* PBXTargetDependency */,
+			);
+			name = EdiePicTests;
+			productName = EdiePicTests;
+			productReference = 93BCE722252426A5009A2886 /* EdiePicTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		93BCE72C252426A5009A2886 /* EdiePicUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 93BCE73C252426A5009A2886 /* Build configuration list for PBXNativeTarget "EdiePicUITests" */;
+			buildPhases = (
+				93BCE729252426A5009A2886 /* Sources */,
+				93BCE72A252426A5009A2886 /* Frameworks */,
+				93BCE72B252426A5009A2886 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				93BCE72F252426A5009A2886 /* PBXTargetDependency */,
+			);
+			name = EdiePicUITests;
+			productName = EdiePicUITests;
+			productReference = 93BCE72D252426A5009A2886 /* EdiePicUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		93F05ACC24F38541003C8119 /* Project object */ = {
+		93BCE709252426A3009A2886 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1160;
-				LastUpgradeCheck = 1160;
-				ORGANIZATIONNAME = "G Abhisek";
+				LastSwiftUpdateCheck = 1200;
+				LastUpgradeCheck = 1200;
 				TargetAttributes = {
-					93F05AD324F38541003C8119 = {
-						CreatedOnToolsVersion = 11.6;
+					93BCE710252426A3009A2886 = {
+						CreatedOnToolsVersion = 12.0;
+					};
+					93BCE721252426A5009A2886 = {
+						CreatedOnToolsVersion = 12.0;
+						TestTargetID = 93BCE710252426A3009A2886;
+					};
+					93BCE72C252426A5009A2886 = {
+						CreatedOnToolsVersion = 12.0;
+						TestTargetID = 93BCE710252426A3009A2886;
 					};
 				};
 			};
-			buildConfigurationList = 93F05ACF24F38541003C8119 /* Build configuration list for PBXProject "EdiePic" */;
+			buildConfigurationList = 93BCE70C252426A3009A2886 /* Build configuration list for PBXProject "EdiePic" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -127,58 +225,90 @@
 				en,
 				Base,
 			);
-			mainGroup = 93F05ACB24F38541003C8119;
-			productRefGroup = 93F05AD524F38541003C8119 /* Products */;
+			mainGroup = 93BCE708252426A3009A2886;
+			productRefGroup = 93BCE712252426A3009A2886 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				93F05AD324F38541003C8119 /* EdiePic */,
+				93BCE710252426A3009A2886 /* EdiePic */,
+				93BCE721252426A5009A2886 /* EdiePicTests */,
+				93BCE72C252426A5009A2886 /* EdiePicUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		93F05AD224F38541003C8119 /* Resources */ = {
+		93BCE70F252426A3009A2886 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				93F05AE424F38542003C8119 /* LaunchScreen.storyboard in Resources */,
-				93F05AE124F38542003C8119 /* Preview Assets.xcassets in Resources */,
-				93F05ADE24F38542003C8119 /* Assets.xcassets in Resources */,
+				93BCE71C252426A4009A2886 /* Preview Assets.xcassets in Resources */,
+				93BCE719252426A4009A2886 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		93BCE720252426A5009A2886 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		93BCE72B252426A5009A2886 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		93F05AD024F38541003C8119 /* Sources */ = {
+		93BCE70D252426A3009A2886 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				93F05AD824F38541003C8119 /* AppDelegate.swift in Sources */,
-				93F05ADA24F38541003C8119 /* SceneDelegate.swift in Sources */,
-				9323413924FBD0EC0017AD9F /* ImagePicker.swift in Sources */,
-				93F05ADC24F38541003C8119 /* FilterView.swift in Sources */,
-				9375DC0C251D8FC70098F171 /* FilterViewModel.swift in Sources */,
-				93A69FC524F4BAE700596707 /* ExperimentView.swift in Sources */,
+				93BCE746252426D0009A2886 /* FilterView.swift in Sources */,
+				93BCE748252426D0009A2886 /* ImagePicker.swift in Sources */,
+				93BCE749252426D0009A2886 /* ExperimentView.swift in Sources */,
+				93BCE747252426D0009A2886 /* FilterViewModel.swift in Sources */,
+				93BCE715252426A3009A2886 /* EdiePicApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		93BCE71E252426A5009A2886 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				93BCE727252426A5009A2886 /* EdiePicTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		93BCE729252426A5009A2886 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				93BCE732252426A5009A2886 /* EdiePicUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXVariantGroup section */
-		93F05AE224F38542003C8119 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				93F05AE324F38542003C8119 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
+/* Begin PBXTargetDependency section */
+		93BCE724252426A5009A2886 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 93BCE710252426A3009A2886 /* EdiePic */;
+			targetProxy = 93BCE723252426A5009A2886 /* PBXContainerItemProxy */;
 		};
-/* End PBXVariantGroup section */
+		93BCE72F252426A5009A2886 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 93BCE710252426A3009A2886 /* EdiePic */;
+			targetProxy = 93BCE72E252426A5009A2886 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		93F05AE624F38542003C8119 /* Debug */ = {
+		93BCE734252426A5009A2886 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -204,6 +334,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -228,7 +359,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -238,7 +369,7 @@
 			};
 			name = Debug;
 		};
-		93F05AE724F38542003C8119 /* Release */ = {
+		93BCE735252426A5009A2886 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -264,6 +395,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -282,7 +414,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -292,16 +424,16 @@
 			};
 			name = Release;
 		};
-		93F05AE924F38542003C8119 /* Debug */ = {
+		93BCE737252426A5009A2886 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"EdiePic/Preview Content\"";
-				DEVELOPMENT_TEAM = 63NQ2DGQ38;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = EdiePic/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -313,16 +445,16 @@
 			};
 			name = Debug;
 		};
-		93F05AEA24F38542003C8119 /* Release */ = {
+		93BCE738252426A5009A2886 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"EdiePic/Preview Content\"";
-				DEVELOPMENT_TEAM = 63NQ2DGQ38;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = EdiePic/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -334,28 +466,126 @@
 			};
 			name = Release;
 		};
+		93BCE73A252426A5009A2886 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = EdiePicTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.go-jek.EdiePicTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EdiePic.app/EdiePic";
+			};
+			name = Debug;
+		};
+		93BCE73B252426A5009A2886 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = EdiePicTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.go-jek.EdiePicTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EdiePic.app/EdiePic";
+			};
+			name = Release;
+		};
+		93BCE73D252426A5009A2886 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = EdiePicUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.go-jek.EdiePicUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = EdiePic;
+			};
+			name = Debug;
+		};
+		93BCE73E252426A5009A2886 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = EdiePicUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.go-jek.EdiePicUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = EdiePic;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		93F05ACF24F38541003C8119 /* Build configuration list for PBXProject "EdiePic" */ = {
+		93BCE70C252426A3009A2886 /* Build configuration list for PBXProject "EdiePic" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				93F05AE624F38542003C8119 /* Debug */,
-				93F05AE724F38542003C8119 /* Release */,
+				93BCE734252426A5009A2886 /* Debug */,
+				93BCE735252426A5009A2886 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		93F05AE824F38542003C8119 /* Build configuration list for PBXNativeTarget "EdiePic" */ = {
+		93BCE736252426A5009A2886 /* Build configuration list for PBXNativeTarget "EdiePic" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				93F05AE924F38542003C8119 /* Debug */,
-				93F05AEA24F38542003C8119 /* Release */,
+				93BCE737252426A5009A2886 /* Debug */,
+				93BCE738252426A5009A2886 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		93BCE739252426A5009A2886 /* Build configuration list for PBXNativeTarget "EdiePicTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				93BCE73A252426A5009A2886 /* Debug */,
+				93BCE73B252426A5009A2886 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		93BCE73C252426A5009A2886 /* Build configuration list for PBXNativeTarget "EdiePicUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				93BCE73D252426A5009A2886 /* Debug */,
+				93BCE73E252426A5009A2886 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 93F05ACC24F38541003C8119 /* Project object */;
+	rootObject = 93BCE709252426A3009A2886 /* Project object */;
 }

@@ -12,6 +12,11 @@ import Combine
 struct FilterView: View {
     @State private var isShowPhotoLibrary = false
     @ObservedObject var imageFilterViewModel: FilterViewModel
+    private var gridItemLayout = [GridItem(.flexible())]
+    
+    init(imageFilterViewModel: FilterViewModel) {
+        self.imageFilterViewModel = imageFilterViewModel
+    }
     
     var body: some View {
         ZStack {
@@ -69,7 +74,7 @@ struct FilterView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        FilterView(imageFilterViewModel: FilterViewModel(defaultImageName: "bike"))
+        FilterView(imageFilterViewModel: FilterViewModel(defaultImageName: "scenery"))
     }
 }
 
