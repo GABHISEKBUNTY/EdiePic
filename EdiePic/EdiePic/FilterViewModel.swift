@@ -14,29 +14,41 @@ import CoreImage.CIFilterBuiltins
 class FilterViewModel: ObservableObject {
     @Published var displayedImage: UIImage
     @Published var filteredImages: [UIImage]
-    @Published var selectedImage: UIImage
-    private var subscriptions = Set<AnyCancellable>()
+    @Published var hasUserSelectedImage: Bool = false
+    var imageSelectedSubject: PassthroughSubject<UIImage, Never> = PassthroughSubject<UIImage, Never>()
     
-    init(defaultImageName: String) {
+    private(set) var selectedIndex: Int = 0
+    private var subscriptions = Set<AnyCancellable>()
+    private let imageSaver: ImagePersistable
+    
+    init(defaultImageName: String,
+         imageSaver: ImagePersistable = ImageSaver()) {
         let defaultImage = UIImage(named: defaultImageName) ?? UIImage()
         displayedImage = defaultImage
-        selectedImage = defaultImage
         filteredImages = [defaultImage]
+        self.imageSaver = imageSaver
+        prepareFilters(image: defaultImage)
         setupBinding()
     }
     
-    func userSelectedImage(image: UIImage) {
-        filteredImages = [image]
-        prepareFilters(image: image)
-        displayedImage = image
+    func userSelectedFilteredImageToDisplay(at index: Int) {
+        selectedIndex = index
+        displayedImage = filteredImages[index]
+    }
+    
+    func userPressedSaveSelectedFilter() {
+        imageSaver.writeToPhotoAlbum(image: filteredImages[selectedIndex])
     }
     
     private func setupBinding() {
-        $selectedImage.sink { [weak self] image in
+        imageSelectedSubject.sink { [weak self] image in
+             self?.selectedIndex = 0
+             self?.hasUserSelectedImage = true
              self?.filteredImages = [image]
              self?.prepareFilters(image: image)
              self?.displayedImage = image
-        }.store(in: &subscriptions)
+        }
+        .store(in: &subscriptions)
     }
 }
 
@@ -106,5 +118,19 @@ extension FilterViewModel {
         }
         
         return UIImage(cgImage: cgimg)
+    }
+}
+
+protocol ImagePersistable {
+    func writeToPhotoAlbum(image: UIImage)
+}
+
+class ImageSaver: NSObject, ImagePersistable {
+    func writeToPhotoAlbum(image: UIImage) {
+        UIImageWriteToSavedPhotosAlbum(image, self, #selector(saveError), nil)
+    }
+
+    @objc func saveError(_ image: UIImage, didFinishSavingWithError error: Error?, contextInfo: UnsafeRawPointer) {
+        print("Save finished!")
     }
 }

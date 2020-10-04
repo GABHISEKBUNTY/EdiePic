@@ -12,7 +12,7 @@ import Combine
 struct FilterView: View {
     @State private var isShowPhotoLibrary = false
     @ObservedObject var imageFilterViewModel: FilterViewModel
-    private var gridItemLayout = [GridItem(.flexible())]
+    private var gridItemLayout = [GridItem(.fixed(70))]
     
     init(imageFilterViewModel: FilterViewModel) {
         self.imageFilterViewModel = imageFilterViewModel
@@ -20,29 +20,47 @@ struct FilterView: View {
     
     var body: some View {
         ZStack {
-            VStack {
-                Spacer()
+            VStack(spacing: 16) {
+                if imageFilterViewModel.hasUserSelectedImage {
+                    HStack {
+                        Spacer()
+                        Button(action:{
+                            self.imageFilterViewModel.userPressedSaveSelectedFilter()
+                        }) {
+                            Text("Save")
+                                .font(.subheadline)
+                        }
+                        .frame(width: 50)
+                        .background(Color.blue)
+                        .foregroundColor(Color.white)
+                        .cornerRadius(5)
+                    }
+                }
                 
+                Spacer()
                 imageFilterViewModel.displayedImage
                     .swiftUIImage
                     .resizable()
                     .scaledToFit()
+                    .border(Color.gray, width: 2)
+                Spacer()
                 
-                Spacer(minLength: 40)
-                ScrollView([.horizontal]) {
-                    HStack {
+                ScrollView(.horizontal) {
+                    LazyHGrid(rows: gridItemLayout, spacing: 20) {
                         ForEach(0..<(imageFilterViewModel.filteredImages.count), id: \.self) { index in
                             Button(action: {
-                                self.imageFilterViewModel.displayedImage = self.imageFilterViewModel.filteredImages[index]
+                                self.imageFilterViewModel.userSelectedFilteredImageToDisplay(at: index)
                             }) {
                                 self.imageFilterViewModel.filteredImages[index]
                                     .swiftUIImage
                                     .resizable()
-                                    .renderingMode(.original)
+                                    .scaledToFit()
                                     .frame(width: 100, height: 70)
                             }
+                            .border(imageFilterViewModel.selectedIndex == index ? Color.blue : Color.clear, width: 2)
                         }
                     }
+                    .frame(height: 70)
                 }
                 
                 Button(action: {
@@ -54,8 +72,8 @@ struct FilterView: View {
                         
                         Text("Photo library")
                             .font(.headline)
-                        }
-                    .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: 50)
+                    }
+                    .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: 40)
                     .background(Color.blue)
                     .foregroundColor(.white)
                     .cornerRadius(20)
@@ -65,7 +83,7 @@ struct FilterView: View {
             .padding()
             .sheet(isPresented: $isShowPhotoLibrary) {
                 ImagePicker(sourceType: .photoLibrary,
-                            selectedImage: self.$imageFilterViewModel.selectedImage)
+                            imageSelectedSubject: self.imageFilterViewModel.imageSelectedSubject)
             }
         }
     }
